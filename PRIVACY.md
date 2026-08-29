@@ -66,11 +66,13 @@ YouTube. Users can also review or revoke Google account access from
 
 ## Security and network access
 
-The application binds its interface only to the local loopback address and
-rejects cross-origin and invalid request-token mutations. Public installers are
-Developer ID signed and notarized before publication. Release update notices
-accept only Photo Relay's GitHub Release URLs; installing an update remains an
-explicit user action.
+The application binds its interface only to the local loopback address. Each
+run admits the launched browser through a private per-run capability stored in
+the current user's owner-only application folder; every interface and API route
+then requires that browser session, with separate origin and request-token
+checks for changes. Public installers are Developer ID signed and notarized
+before publication. Release update notices accept only Photo Relay's GitHub
+Release URLs; installing an update remains an explicit user action.
 
 ## Changes and support
 
