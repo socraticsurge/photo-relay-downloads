@@ -19,8 +19,8 @@ Published releases are checked by Apple notarization and include a SHA-256
 checksum. Do not install artifacts from issues, comments, forks, or unofficial
 mirrors.
 
-No public installer has been released yet. This repository will remain the
-canonical download and update location when the first signed build is ready.
+The Releases page is the canonical download and update location. If that page
+is empty, no signed public installer has been released yet.
 
 ## What stays local
 
