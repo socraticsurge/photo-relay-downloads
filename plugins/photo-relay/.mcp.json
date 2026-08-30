@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "photo-relay": {
+      "command": "./scripts/launch_photo_relay_mcp",
+      "args": [],
+      "cwd": ".",
+      "env_vars": [
+        "GP2YT_DATA_DIR",
+        "PHOTO_RELAY_EXECUTABLE",
+        "PHOTO_RELAY_PROJECT_ROOT"
+      ]
+    }
+  }
+}

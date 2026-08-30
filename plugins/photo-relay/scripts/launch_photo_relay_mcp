@@ -1,0 +1,21 @@
+#!/bin/sh
+set -eu
+
+for helper in \
+  "/Applications/Photo Relay.app/Contents/MacOS/photo-relay-mcp" \
+  "${HOME}/Applications/Photo Relay.app/Contents/MacOS/photo-relay-mcp"
+do
+  if [ -x "${helper}" ]; then
+    exec "${helper}"
+  fi
+done
+
+script_directory=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+project_root=$(CDPATH= cd -- "${script_directory}/../../.." && pwd)
+if [ -f "${project_root}/gp2yt/mcp_server.py" ] && command -v python3 >/dev/null 2>&1; then
+  cd "${project_root}"
+  exec python3 -m gp2yt.mcp_server
+fi
+
+echo "Photo Relay is not installed. Download it from https://github.com/socraticsurge/photo-relay-downloads/releases" >&2
+exit 127

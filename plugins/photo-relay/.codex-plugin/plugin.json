@@ -1,0 +1,37 @@
+{
+  "name": "photo-relay",
+  "version": "0.1.0",
+  "description": "Move selected Google Photos videos to YouTube through a durable local worker.",
+  "author": {
+    "name": "Socratic Surge",
+    "url": "https://github.com/socraticsurge"
+  },
+  "homepage": "https://github.com/socraticsurge/photo-relay-downloads",
+  "keywords": [
+    "google-photos",
+    "youtube",
+    "video-transfer",
+    "local-first"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Photo Relay",
+    "shortDescription": "Move selected Photos videos to YouTube locally.",
+    "longDescription": "Select videos with Google Photos Picker, transfer them one at a time through the local Photo Relay worker, resume safely after interruptions, avoid duplicate uploads, and review verified copies before manually cleaning up Google Photos.",
+    "developerName": "Socratic Surge",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://github.com/socraticsurge/photo-relay-downloads",
+    "privacyPolicyURL": "https://github.com/socraticsurge/photo-relay-downloads/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/socraticsurge/photo-relay-downloads/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "Continue my Photo Relay transfers.",
+      "Let me select more videos from Google Photos.",
+      "Guide me through the next verified cleanup."
+    ],
+    "brandColor": "#3A6B5B",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -46,6 +46,17 @@ It is not a hosted service or a public OpenAI Plugin Directory listing. The
 desktop app remains responsible for transfers, and its Google consent, Photos
 selection, and manual cleanup steps still require the user.
 
+After installing the desktop app, Codex users can install the companion from
+this repository's Git marketplace:
+
+```sh
+codex plugin marketplace add socraticsurge/photo-relay-downloads
+codex plugin add photo-relay@socratic-surge
+```
+
+This copies the local skill and MCP launcher to the user's machine. It does not
+send video bytes or Google credentials through a Photo Relay cloud service.
+
 ## Requirements
 
 - macOS 12 or newer.
