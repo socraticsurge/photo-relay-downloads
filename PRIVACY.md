@@ -42,7 +42,9 @@ the active AI conversation a limited projection of transfer metadata needed for
 that request. Depending on the workflow, this can include setup and queue
 states, the destination channel's public-facing title, saved upload choices,
 item numbers, filenames, capture or duration metadata, YouTube titles, and
-whether a verified YouTube link exists. The plugin can also report actions it
+whether a verified YouTube link exists. A destination YouTube channel ID and an
+ephemeral Google Photos Picker session ID can also reach the conversation when
+needed to bind the user's chosen workflow. The plugin can report actions it
 performed, such as opening Google Photos Picker, starting or pausing the local
 queue, or recording a cleanup review.
 
@@ -97,10 +99,12 @@ YouTube. Users can also review or revoke Google account access from
 The application binds its interface only to the local loopback address. Each
 run admits the launched browser through a private per-run capability stored in
 the current user's owner-only application folder; every interface and API route
-then requires that browser session, with separate origin and request-token
-checks for changes. Public installers are Developer ID signed and notarized
-before publication. Release update notices accept only Photo Relay's GitHub
-Release URLs; installing an update remains an explicit user action.
+then requires that private session. Every change also requires a separate
+request token. Browser-originated changes additionally require a matching
+loopback Origin; the authenticated local MCP client intentionally sends no
+browser Origin. Public installers are Developer ID signed and notarized before
+publication. Release update notices accept only Photo Relay's GitHub Release
+URLs; installing an update remains an explicit user action.
 
 ## Changes and support
 

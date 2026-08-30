@@ -23,8 +23,8 @@ If the plugin cannot find or start Photo Relay:
 
 Never paste an MCP transcript containing personal filenames into a public
 issue. Report the plugin version, app version, and a sanitized error message.
-The local plugin is supported for personal and repository-local use; it is not
-currently a public Plugin Directory integration.
+The local plugin is distributed through Photo Relay's Git marketplace for the
+personal pilot; it is not a universal public Plugin Directory integration.
 
 ## Common recovery steps
 

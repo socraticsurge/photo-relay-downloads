@@ -41,7 +41,8 @@ Google. For help, use
 [Issues](https://github.com/socraticsurge/photo-relay-downloads/issues). For a
 security concern, follow [the private reporting instructions](SECURITY.md).
 
-The optional Codex companion is currently a local, repository-installed plugin.
+The optional Codex companion is a local plugin distributed through this Git
+marketplace.
 It is not a hosted service or a public OpenAI Plugin Directory listing. The
 desktop app remains responsible for transfers, and its Google consent, Photos
 selection, and manual cleanup steps still require the user.

@@ -12,10 +12,15 @@ current step.
 
 ## Start every workflow
 
-1. Call `status` before suggesting or taking an action.
+The installed Photo Relay desktop application is a hard prerequisite for this
+companion. Its bundled helper provides the MCP process; without the app the
+tools cannot start. If the launcher reports that Photo Relay is not installed,
+send the user only to the trusted Photo Relay Releases page and stop.
+
+1. Once the desktop app is installed, call `status` before suggesting or taking
+   an action. This reads cached local state and does not refresh Google.
 2. Follow `nextAction` unless the user asked for a narrower read-only status.
-3. If Photo Relay is not running, call `open_app`. If it is not installed, give
-   the installer URL returned by the tool.
+3. If Photo Relay is not running, call `open_app`.
 4. Use `open_app` for recovery, channel-switch confirmation, ambiguous YouTube
    commits, older-upload reconciliation, or any state not covered by a narrow
    tool.
