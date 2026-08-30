@@ -1,10 +1,10 @@
 # Photo Relay privacy notice
 
-Last updated: August 29, 2026
+Last updated: August 30, 2026
 
 Photo Relay is a local-first macOS application that moves videos a user selects
 in Google Photos to a YouTube channel chosen by that user. This notice describes
-the released desktop application's data practices.
+the desktop application and optional local Codex plugin's data practices.
 
 ## Data Photo Relay accesses
 
@@ -29,6 +29,32 @@ it to an unrelated third party.
 Video bytes travel from Google Photos to the user's Mac and then to YouTube.
 Photo Relay does not operate a cloud relay or receive a copy of the video on a
 publisher-controlled server.
+
+## Optional local agent companion
+
+Photo Relay can be used through its local Codex plugin. The plugin starts a
+local stdio MCP process and communicates with the same owner-only Photo Relay
+instance on the Mac. It does not expose Photo Relay's loopback interface to the
+internet and does not add a publisher-operated cloud service.
+
+When the user asks Codex to inspect or operate Photo Relay, the plugin may send
+the active AI conversation a limited projection of transfer metadata needed for
+that request. Depending on the workflow, this can include setup and queue
+states, the destination channel's public-facing title, saved upload choices,
+item numbers, filenames, capture or duration metadata, YouTube titles, and
+whether a verified YouTube link exists. The plugin can also report actions it
+performed, such as opening Google Photos Picker, starting or pausing the local
+queue, or recording a cleanup review.
+
+The plugin does not return video bytes, OAuth tokens, client secrets, resumable
+upload URLs, browser cookies, request tokens, Photo Relay's private launch URL,
+database paths, or temporary-file paths to the AI conversation. Pages used for
+Google consent, Photos selection, YouTube playback, and Photos cleanup open
+locally for the user; their trusted destination URLs are not included in the
+tool response. Content sent to Codex is also governed by the terms and data
+controls of the Codex account and product the user chose. Users who do not want
+transfer metadata in an AI conversation can use the desktop interface without
+installing or enabling the plugin.
 
 Photo Relay's use and transfer of information received from Google APIs adheres
 to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy),
@@ -59,6 +85,8 @@ The application provides controls to:
 - Remove locally stored authorized Google/API data after transfers are stopped.
 - Quit the local application.
 - Export the user's own transfer and cleanup history.
+- Disable or uninstall the optional local Codex plugin without erasing the
+  desktop application's ledger.
 
 Removing Photo Relay's local data does not delete videos from Google Photos or
 YouTube. Users can also review or revoke Google account access from

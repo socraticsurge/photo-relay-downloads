@@ -26,12 +26,25 @@ is empty, no signed public installer has been released yet.
 
 Videos travel from Google Photos to this Mac and then to YouTube. Photo Relay
 does not operate a cloud video relay. Its transfer ledger, temporary media,
-posters, diagnostics, and Google authorization state remain in the current
-user's private macOS Application Support directory.
+posters, and diagnostics remain in the current user's private macOS Application
+Support directory. Google access and refresh tokens use macOS Keychain when
+available, with an owner-only local fallback.
 
-Read the [privacy notice](PRIVACY.md) before connecting Google. For help, use
+The app includes the publisher's Google Desktop OAuth configuration so users do
+not create a Google Cloud project. Google's generated `client_secret` field in
+that configuration is extractable public desktop-app data; it is not a user
+credential and grants no account access by itself. User OAuth tokens are never
+part of the installer.
+
+Read the [privacy notice](PRIVACY.md) and [terms](TERMS.md) before connecting
+Google. For help, use
 [Issues](https://github.com/socraticsurge/photo-relay-downloads/issues). For a
 security concern, follow [the private reporting instructions](SECURITY.md).
+
+The optional Codex companion is currently a local, repository-installed plugin.
+It is not a hosted service or a public OpenAI Plugin Directory listing. The
+desktop app remains responsible for transfers, and its Google consent, Photos
+selection, and manual cleanup steps still require the user.
 
 ## Requirements
 
